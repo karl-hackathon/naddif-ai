@@ -13,7 +13,7 @@ import {
 import { UserProfile } from "@/components/user-profile";
 import config from "@/config";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Banknote, Folder, HomeIcon, Settings } from "lucide-react";
+import { Banknote, Folder, HomeIcon, PieChart, Settings } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -47,24 +47,24 @@ export default function DashboardTopNav({ children }: { children: ReactNode }) {
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
-                                <Link href="/dashboard/projects">
+                                <Link href="/dashboard/reviews">
                                     <Button
                                         variant="outline"
                                         className="w-full"
                                     >
                                         <Folder className="mr-2 h-4 w-4" />
-                                        Projects
+                                        Reviews
                                     </Button>
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
-                                <Link href="/dashboard/finance">
+                                <Link href="/dashboard/analytics">
                                     <Button
                                         variant="outline"
                                         className="w-full"
                                     >
-                                        <Banknote className="mr-2 h-4 w-4" />
-                                        Finance
+                                        <PieChart className="mr-2 h-4 w-4" />
+                                        Analytics
                                     </Button>
                                 </Link>
                             </DialogClose>

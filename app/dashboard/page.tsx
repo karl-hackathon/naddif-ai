@@ -47,15 +47,11 @@ export default async function Dashboard() {
                     </svg>
                 </CardHeader>
                 <CardContent>
-                    <Suspense fallback={<Skeleton className="w-[100px] h-8" />}>
+                    {/* <Suspense fallback={}> */}
                         <CreditsCardContent />
-                    </Suspense>
+                    {/* </Suspense> */}
                 </CardContent>
             </Card>
-            {/* <div className="flex flex-wrap gap-2">
-                <BarChartComponent />
-                <BarChartBetter />
-            </div> */}
             <div className="grid md:grid-cols-2 sm:grid-cols-1 w-full gap-3">
                 <Card className="">
                     <CardHeader className="flex flex-row items-center">

@@ -180,9 +180,9 @@ export default function Pricing() {
     );
 
     useEffect(() => {
-        setStripePromise(
-            loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!)
-        );
+        // setStripePromise(
+        //     loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!)
+        // );
     }, []);
 
     const handleCheckout = async (priceId: string, subscription: boolean) => {
