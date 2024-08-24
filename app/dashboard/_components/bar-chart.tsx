@@ -135,7 +135,7 @@ export function BarChartComponent({ barData }: { barData: any }) {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending<TrendingUp className="h-4 w-4" />
+          Total <span className="font-bold">{barData.reduce((sum: any, item: any) => sum + item.count, 0)}</span> <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
         Bar chart showcasing the severity of your code reviews

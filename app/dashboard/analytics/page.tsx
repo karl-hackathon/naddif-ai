@@ -52,7 +52,7 @@ export default async function AnalyticsPage() {
     <main className="flex min-w-screen p-4 flex-col items-start justify-between ">
           <div className="flex flex-wrap gap-2">
             <BarChartComponent barData={barData} />
-            <BarChartBetter />
+            {/* <BarChartBetter /> */}
         </div>
     </main>
   )
