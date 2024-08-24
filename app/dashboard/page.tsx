@@ -20,8 +20,12 @@ import {
 } from "../../components/ui/file-uploader";
 import DocumentUploader from "./_components/document-uploader";
 import { Calendar } from "@/components/ui/calendar";
+import CodeHighlighter from "./_components/code-highlighter";
+import { Textarea } from "@/components/ui/textarea";
+import CodeContainer from "./_components/code-container";
 
-export default function Dashboard() {
+
+export default async function Dashboard() {
     return (
         <div className="flex flex-col justify-center items-start flex-wrap px-4 pt-4 gap-4">
             <Card className="w-[20rem]">
@@ -56,14 +60,14 @@ export default function Dashboard() {
                 <Card className="">
                     <CardHeader className="flex flex-row items-center">
                         <div className="grid gap-2">
-                            <CardTitle>Convert Here</CardTitle>
+                            <CardTitle>Code Review</CardTitle>
                             <CardDescription>
-                                Drop your bank statement here, and we'll do the
+                                Copy and past your code here, and we'll do the
                                 magic!
                             </CardDescription>
                         </div>
                         <Button asChild size="sm" className="ml-auto gap-1">
-                            <Link href="/dashboard/documents">
+                            <Link href="/dashboard/reviews">
                                 View All
                                 <ArrowUpRight className="h-4 w-4" />
                             </Link>
@@ -85,7 +89,8 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                             </main> */}
-                            <DocumentUploader />
+                            {/* <DocumentUploader /> */}
+                            <CodeContainer />
                         </div>
                     </CardContent>
                 </Card>

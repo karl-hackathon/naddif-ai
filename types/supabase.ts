@@ -9,37 +9,37 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      documents: {
+      code_reviews: {
         Row: {
-          bank_name: string | null
+          code: string
           created_at: string
-          csv_url: string | null
-          document_id: string
-          document_name: string | null
-          pdf_url: string
+          description: string
+          id: number
+          severity: number
+          suggestion: string
           user_id: string
         }
         Insert: {
-          bank_name?: string | null
+          code: string
           created_at?: string
-          csv_url?: string | null
-          document_id: string
-          document_name?: string | null
-          pdf_url: string
+          description: string
+          id?: number
+          severity: number
+          suggestion: string
           user_id: string
         }
         Update: {
-          bank_name?: string | null
+          code?: string
           created_at?: string
-          csv_url?: string | null
-          document_id?: string
-          document_name?: string | null
-          pdf_url?: string
+          description?: string
+          id?: number
+          severity?: number
+          suggestion?: string
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "documents_user_id_fkey"
+            foreignKeyName: "code_reviews_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "user"
@@ -51,7 +51,7 @@ export type Database = {
         Row: {
           created_at: string
           credits: number
-          email: string | null
+          email: string
           first_name: string | null
           last_name: string | null
           profile_image_url: string | null
@@ -60,7 +60,7 @@ export type Database = {
         Insert: {
           created_at?: string
           credits?: number
-          email?: string | null
+          email: string
           first_name?: string | null
           last_name?: string | null
           profile_image_url?: string | null
@@ -69,7 +69,7 @@ export type Database = {
         Update: {
           created_at?: string
           credits?: number
-          email?: string | null
+          email?: string
           first_name?: string | null
           last_name?: string | null
           profile_image_url?: string | null
@@ -82,7 +82,13 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      decrement_credits: {
+        Args: {
+          p_user_id: string
+          decrement_value: number
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never

@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import DocumentContainer from "./_components/documents-container";
+import DocumentContainer from "./_components/reviews-container";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function DocumentsPage() {
+export default async function ReviewsPage() {
     return (
         <main className="flex flex-col gap-2 lg:gap-2 min-h-[90vh] w-full">
             <Suspense
