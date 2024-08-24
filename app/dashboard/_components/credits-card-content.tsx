@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 
 export default function CreditsCardContent() {
     const { user: u } = useUser()
+
+    if (!u) return
     const supabase = createBrowserClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_PUBLIC_KEY!);
     const [user, setUser] = useState<User | null>(null)
     const [isLoading, setIsLoading] = useState(false)
